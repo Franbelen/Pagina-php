@@ -31,15 +31,15 @@
     Contraseña:
     <input type="text" name="nombre">
     <br/><br/>
-    <input type="submit" value="Buscar">
+    <input type="submit" value="Login">
   </form>
   <br>
   <br>
   <br>
 
-<h3 align="center">Importar datos</h3>
-<form align="center" action="acciones/importar_a_usuarios.php" method="post">
-    <input type="submit" value="Buscar">
+<h3 align= "center" >Importar datos</h3>
+<form align= "center" action="acciones/importar_a_usuarios.php" method="post">
+    <input type="submit" value="Importar">
   </form>
   <br>
   <br>

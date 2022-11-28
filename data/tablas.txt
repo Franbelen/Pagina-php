@@ -1,3 +1,7 @@
+--------------Base impar----------------------------------------------------------------
+
+usuarios(id,nombre,tipo)
+
 artistas(nombre,fecha_inicio,teléfono)
 
 entradascortesia(nombre_evento,nombre_artista,asiento)
@@ -13,3 +17,5 @@ tour(nombre,fecha_inicio,fecha_termino)
 trasladoaéreo(código,aeropuerto_salida,hora_salida,aeropuerto_llegada,hora_llegada)
 
 viaje(código,nombre_artista,fecha_inicio,fecha_termino,tipo_traslado)
+
+--------------Base par------------------------------------------------------------------
