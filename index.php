@@ -1,3 +1,5 @@
+<?php session_start() ?>
+
 <?php include('templates/header.html');   ?>
 <style>
   <?php include "./styles/style.css" ?>
@@ -19,9 +21,14 @@
   <br>
   <br>
   <br>
+  <br>
+  <br>
+  <br>
+  <br>
 
+<div>
 <?php if(empty($_SESSION['username']))?>
-// Si no está asignada la variable mostrar form para ingresar
+
 <h3 align="center">Iniciar sesión</h3>
 
   <form align="center" action="acciones/crear_sesion.php" method="POST">
@@ -34,7 +41,7 @@
 </form>
 
 <?php?>
-
+</div>
 
 <h3 align= "center" >Importar datos</h3>
 <form align= "center" action="acciones/importar_a_usuarios.php" method="post">

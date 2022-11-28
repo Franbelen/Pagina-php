@@ -1,3 +1,5 @@
+<?php session_start() ?>
+
 <?php include('../templates/header.html');   ?>
 <style>
   <?php include ".././styles/style.css" ?>
@@ -7,12 +9,9 @@
   <div id='stars2'></div>
   <div id='stars3'></div>
   <div id='title'></div>
-  
-<?php
-// Llamar a la función al inicio del script
-session_start();
 
-// Almacenar variables de sesión en array global
+<?php
+
 $_SESSION;
 
 $_SESSION[‘ID’] = ‘123’;
