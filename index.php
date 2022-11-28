@@ -22,7 +22,18 @@
   <br>
   <br>
 
-  
+<?php
+// Si no está asignada la variable mostrar form para ingresar
+if(empty($_SESSION['username']))?>
+<div>
+  <form method="POST">
+  <input type="text" name="username">
+  <input type="password" name="password">
+  <button type="submit" name="login">Login</button>
+</form>
+</div>
+<?php?>
+
 <h3 align="center">Iniciar sesión</h3>
 <form align="center" action="acciones/iniciar_sesion.php" method="post">
     Nombre:
