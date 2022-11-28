@@ -19,34 +19,22 @@
   <br>
   <br>
   <br>
-  <br>
-  <br>
 
-<?php
+<?php if(empty($_SESSION['username']))?>
 // Si no está asignada la variable mostrar form para ingresar
-if(empty($_SESSION['username']))?>
-<div>
-  <form method="POST">
+<h3 align="center">Iniciar sesión</h3>
+
+  <form align="center" action="acciones/crear_sesion.php" method="POST">
+  
   <input type="text" name="username">
+  <br/><br/>
   <input type="password" name="password">
+  <br/><br/>
   <button type="submit" name="login">Login</button>
 </form>
-</div>
+
 <?php?>
 
-<h3 align="center">Iniciar sesión</h3>
-<form align="center" action="acciones/iniciar_sesion.php" method="post">
-    Nombre:
-    <input type="text" name="nombre">
-    <br/><br/>
-    Contraseña:
-    <input type="text" name="nombre">
-    <br/><br/>
-    <input type="submit" value="Login">
-  </form>
-  <br>
-  <br>
-  <br>
 
 <h3 align= "center" >Importar datos</h3>
 <form align= "center" action="acciones/importar_a_usuarios.php" method="post">
