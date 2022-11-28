@@ -1,0 +1,46 @@
+1
+SELECT a.nombre, a.telefono
+FROM artistas as a;
+
+2
+SELECT a.nombre as artista, COUNT(ec.asiento) as cantidad_entradas_cortesia
+FROM artistas as a, entradascortesia as ec
+WHERE a.nombre = ec.nombre_artista
+AND a.nombre = 'artista_ingresado_por_usuario'
+GROUP BY a.nombre;
+
+
+3
+SELECT e.*
+FROM tour as t, eventos as e
+WHERE t.nombre = e.nombre
+AND LOWER(e.nombre_artista) LIKE LOWER('%Duki%')
+ORDER BY e.fecha_inicio DESC
+LIMIT 1;
+
+4
+SELECT e.país
+FROM tour as t, eventos as e
+WHERE t.nombre = e.nombre
+AND t.nombre = 'tour_ingresado_por_usuario';
+
+
+5
+SELECT p.nombre as nombres_productora
+FROM artistas as a, eventos as e, productoras as p
+WHERE e.nombre_artista = a.nombre
+AND e.nombre_productora = p.nombre
+AND a.nombre = 'artista_ingresado_por_usuario';
+
+
+6 
+
+SELECT v.nombre_artista,h.nombre, h.lugar , COUNT(v.nombre_artista,h.nombre, h.lugar)
+FROM estadía as h, viaje as v
+WHERE LOWER(v.nombre_artista) LIKE LOWER('%%')
+AND v.código = h.código
+GROUP BY v.nombre_artista, h.nombre, h.lugar
+ORDER BY v.nombre_artista;
+
+
+7

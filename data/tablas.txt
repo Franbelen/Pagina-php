@@ -1,0 +1,15 @@
+artistas(nombre,fecha_inicio,teléfono)
+
+entradascortesia(nombre_evento,nombre_artista,asiento)
+
+estadía(código,nombre,lugar)
+
+eventos(nombre,nombre_recinto,nombre_artista,ciudad,país,fecha_inicio,nombre_productora)
+
+productoras(nombre,país,teléfono)
+
+tour(nombre,fecha_inicio,fecha_termino)
+
+trasladoaéreo(código,aeropuerto_salida,hora_salida,aeropuerto_llegada,hora_llegada)
+
+viaje(código,nombre_artista,fecha_inicio,fecha_termino,tipo_traslado)
