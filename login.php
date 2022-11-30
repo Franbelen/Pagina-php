@@ -15,10 +15,11 @@ if(isset($_POST['user_name']))
 	$result = $db -> prepare($query);
 	$result -> execute();
 	$usuarios = $result -> fetchAll();
-
-    echo $usuarios;
-
-    if (count($usuarios) == 1)
+?>
+    
+    <h1 align="center"> Bienvenido  <?php echo $name ?> </h1>
+<?php
+    if (count($usuarios) > 0)
     {
         session_start();
         $_SESSION['name'] = $_POST['user_name'];
@@ -34,7 +35,6 @@ if(isset($_POST['user_name']))
     else
     {
         echo "Error en datos";
-        sleep(2);
         header("location: index.php");
         
     }
