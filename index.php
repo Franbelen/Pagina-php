@@ -40,7 +40,7 @@
   <button type="submit" name="login">Login</button>
 </form>
 
-<?php?>
+<?php ?>
 </div>
 
 <h3 align= "center" >Importar datos</h3>
