@@ -10,11 +10,13 @@ if(isset($_POST['user_name']))
 
 	$query = "SELECT * 
 	FROM usuarios
-	WHERE nombre = $name and contrasena = $password;";
+	WHERE nombre = $name and password = $password;";
 
 	$result = $db -> prepare($query);
 	$result -> execute();
 	$usuarios = $result -> fetchAll();
+
+    echo $usuarios;
 
     if (count($usuarios) == 1)
     {
@@ -27,6 +29,13 @@ if(isset($_POST['user_name']))
         if ($_SESSION['tipe']== "Productora"){
         # entrada productora
         header("location: pagina_inicio_productora.php");}   
+        
+    }
+    else
+    {
+        echo "Error en datos";
+        sleep(2);
+        header("location: index.php");
         
     }
 }
