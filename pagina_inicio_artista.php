@@ -1,9 +1,14 @@
+<?php
+  session_start();
+    $name = $_SESSION['name'];
+?>
+
 <?php include('templates/header.html');   ?>
 <style>
   <?php include "./styles/style.css" ?>
 </style>
 
-<body>
+<head>
 
   <div id='stars'></div>
   <div id='stars2'></div>
@@ -20,8 +25,10 @@
   <br>
   <br>
   <br>
-  <br>
+</head>
 
+<body>
+  <h1> Bienvinido  <?php echo $name ?> </h1>
   <h3 align="center"> ¿Quieres saber los nombres y telefonos de todos nuestros artistas?</h3>
 
   <form align="center" action="consultas/consulta_all.php" method="post">

@@ -27,15 +27,15 @@
   <br>
 
 <div>
-<?php if(empty($_SESSION['username']))?>
+<?php if(empty($_SESSION['user_name']))?>
 
 <h3 align="center">Iniciar sesión</h3>
 
   <form align="center" action="login.php" method="POST">
   
-  <input type="text" name="username">
+  <input type="text" name= 'user_name'>
   <br/><br/>
-  <input type="password" name="password">
+  <input type="password" name='password'>
   <br/><br/>
   <button type="submit" name="login">Login</button>
 </form>
