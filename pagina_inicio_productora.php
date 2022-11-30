@@ -15,7 +15,7 @@
   <div id='stars3'></div>
   <div id='title'>
 
-  <h1 align="center">DCC eventos: Artistas</h1>
+  <h1 align="center">DCC eventos: Productoras</h1>
   <div id='title2'><p style="text-align:center;">Aquí podrás encontrar información.</p>
   </div>
   <br>
