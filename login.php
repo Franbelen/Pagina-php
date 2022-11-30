@@ -18,13 +18,18 @@ if(isset($_POST['user_name']))
 
     echo $usuarios;
 
+
+    #cantidad de tuplas que cumplen las condiciones
+    #revisar 
     $filas = pg_num_rows($usuarios);
 
     if ($filas == 1)
     {
         session_start();
+        #atributos de la sesion
         $_SESSION['name'] = $_POST['user_name'];
         $_SESSION['tipe'] = $usuarios[0][2];
+
         if ($_SESSION['tipe']== "Artista"){
         # entrada artista
         header("location: pagina_inicio_artista.php");}

@@ -1,4 +1,5 @@
 <?php
+  #para usar name sesion#
   session_start();
   $name = $_SESSION['name'];
 ?>
