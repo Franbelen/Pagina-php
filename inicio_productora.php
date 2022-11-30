@@ -1,6 +1,6 @@
 <?php
   session_start();
-    $name = $_SESSION['name'];
+  $name = $_SESSION['name'];
 ?>
 
 <?php include('templates/header.html');   ?>
