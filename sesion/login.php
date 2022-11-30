@@ -16,7 +16,7 @@ if(isset($_POST['user_name']))
 	$result -> execute();
 	$usuarios = $result -> fetchAll();
 
-    if (mysql_num_rows($usurios) == 1)
+    if (count($usuarios) == 1)
     {
         session_start();
         $_SESSION['name'] = $_POST['user_name'];
