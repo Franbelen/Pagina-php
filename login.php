@@ -18,7 +18,9 @@ if(isset($_POST['user_name']))
 
     echo $usuarios;
 
-    if (count($usuarios) == 1)
+    $filas = pg_num_rows($usuarios);
+
+    if ($filas == 1)
     {
         session_start();
         $_SESSION['name'] = $_POST['user_name'];
@@ -26,7 +28,7 @@ if(isset($_POST['user_name']))
         if ($_SESSION['tipe']== "Artista"){
         # entrada artista
         header("location: pagina_inicio_artista.php");}
-        if ($_SESSION['tipe']== "Productora"){
+        else {
         # entrada productora
         header("location: pagina_inicio_productora.php");}   
         
@@ -34,7 +36,7 @@ if(isset($_POST['user_name']))
     else
     {
         echo "Error en datos";
-        sleep(2);
+        
         header("location: index.php");
         
     }

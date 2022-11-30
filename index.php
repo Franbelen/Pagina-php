@@ -44,7 +44,7 @@
 </div>
 
 <h3 align= "center" >Importar datos</h3>
-<form align= "center" action="acciones/importar_a_usuarios.php" method="post">
+<form align= "center" action="users/importar_a_usuarios.php" method="post">
     <input type="submit" value="Importar">
   </form>
   <br>
