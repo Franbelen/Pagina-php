@@ -22,6 +22,7 @@ if ($booleano){
 }
 
 #Looping. Hay varios tipos de looping. Investigar!
+#hola
 echo "<h3>For Loop:</h3>";
 for($i = 0; $i<6; $i++) {
   echo "<p> i: $i </p>";
