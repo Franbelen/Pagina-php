@@ -31,7 +31,7 @@
 
 <h3 align="center">Iniciar sesión</h3>
 
-  <form align="center" action="acciones/crear_sesion.php" method="POST">
+  <form align="center" action="login.php" method="POST">
   
   <input type="text" name="username">
   <br/><br/>

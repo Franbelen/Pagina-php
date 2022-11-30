@@ -10,14 +10,7 @@
   <div id='stars3'></div>
   <div id='title'></div>
 
-<?php
 
-$_SESSION;
-
-$_SESSION[‘ID’] = ‘123’;
-$_SESSION[username’] = $_POST[‘username’];
-
-?>
 
 <?php
   #Llama a conexión, crea el objeto PDO y obtiene la variable $db
@@ -48,4 +41,13 @@ $_SESSION[username’] = $_POST[‘username’];
   ?>
 	</table>
 	</div>
+
+	<?php
+
+$_SESSION;
+
+$_SESSION[‘ID’] = ‘123’;
+$_SESSION[username’] = $_POST[‘username’];
+
+?>
 <?php include('../templates/footer.html'); ?>
