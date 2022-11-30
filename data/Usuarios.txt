@@ -1,0 +1,17 @@
+# admin artista 
+
+nombre = Admin a
+pasword = 1234
+tipo = Artista
+
+# admin productora
+
+nombre = Admin p
+pasword = 1234
+tipo = Productora
+
+# metodo para insertar
+
+INSERT INTO usuarios(nombre,tipo,password)
+VALUES 
+

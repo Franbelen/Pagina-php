@@ -1,6 +1,13 @@
 --------------Base impar----------------------------------------------------------------
 
-usuarios(id,nombre,tipo)
+usuarios(id,nombre,tipo,password)
+
+CREATE TABLE usuarios(
+  id serial,
+  nombre varchar(30),
+  tipo varchar(30),
+  password varchar(30),
+  primary key (id));
 
 artistas(nombre,fecha_inicio,teléfono)
 
