@@ -19,7 +19,10 @@ if(isset($_POST['user_name']))
 
 	$query = "SELECT * 
 	FROM usuarios
-    WHERE nombre = strval($name) and password = strval($pswd);";
+    WHERE nombre = $name and password = $pswd;";
+
+    echo $name, $pswd, gettype($name),gettype($pswd) /n;
+
 	$result = $db -> prepare($query);
 	$result -> execute();
 	$usi = $result -> fetchAll();
@@ -31,7 +34,6 @@ if(isset($_POST['user_name']))
 
     #cantidad de tuplas que cumplen las condiciones
     $filas = count($usi);
-
     echo $filas;
 
     if ($filas > 0)
