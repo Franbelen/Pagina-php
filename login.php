@@ -25,7 +25,7 @@ if(isset($_POST['user_name']))
     #cantidad de tuplas que cumplen las condiciones
     #revisar 
     $filas = pg_num_rows($usuarios);
-    
+
     if ($filas > 0)
     {
         session_start();
@@ -35,10 +35,10 @@ if(isset($_POST['user_name']))
 
         if ($_SESSION['tipe']== "Artista"){
         # entrada artista
-        header("location: pagina_inicio_artista.php");}
+        header("location: inicio_artista.php");}
         else {
         # entrada productora
-        header("location: pagina_inicio_productora.php");}   
+        header("location: inicio_productora.php");}   
         
     }
     else
