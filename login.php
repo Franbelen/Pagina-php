@@ -15,7 +15,7 @@ if(isset($_POST['user_name']))
 
 	$query = "SELECT * 
 	FROM usuarios
-	WHERE nombre = $name and password = $password;";
+	WHERE nombre  ilike $name and password = $password;";
 
 	$result = $db -> prepare($query);
 	$result -> execute();
