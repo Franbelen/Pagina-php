@@ -37,10 +37,13 @@
   <br>
   <br>
 
-  <h3 align="center"> ¿Quieres saber a quien le ha entregado entradas de cortesía un artista?</h3>
-  <form align="center" action="consultas/consulta_entradas_cortesia.php" method="post">
-    Nombre
-    <input type="text" name="nombre_artista">
+  <h3 align="center"> Filtrar por fechas</h3>
+  <form align="center" action="consultas/consulta_fecha_p_eventos.php" method="post">
+    Desde
+    <input type="text" name="desde">
+    <br/>
+    Hasta
+    <input type="text" name="hasta">
     <br/>
     
     <input type="submit" value="Buscar">
