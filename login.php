@@ -1,10 +1,8 @@
 <?php session_start() ?>
-
 <?php include('templates/header.html');   ?>
 <style>
   <?php include "./styles/style.css" ?>
 </style>
-
 
 <?php
 if(isset($_POST['user_name']))
@@ -33,7 +31,6 @@ if(isset($_POST['user_name']))
 
     #cantidad de tuplas que cumplen las condiciones
     $filas = count($usi);
-    echo $filas;
 
     if ($filas > 0)
     {
@@ -44,17 +41,15 @@ if(isset($_POST['user_name']))
 
         if ($_SESSION['tipe']== "Artista")
         {# entrada artista
-        echo "bienvenido";
-        echo $name;
+    
         header("location: inicio_artista.php");
-        exit();
+        die();
         }
         else 
         {# entrada productora
-        echo "bienvenido productora";
-        echo $name;
+        
         header("location: inicio_productora.php");
-        exit();
+        die();
         }   
         
     }
@@ -62,13 +57,12 @@ if(isset($_POST['user_name']))
     {
         echo "/nError en datos";
         header("location: index.php");
-        
+        die();
     }
 }
 
 if(!isset($_POST['user_name']))
 {
     header("location: index.php");
-}
-
-?>
+    die();
+}?>
