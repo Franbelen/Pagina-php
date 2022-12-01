@@ -45,7 +45,7 @@ if(isset($_POST['user_name']))
     {
         echo "Error en datos";
         
-        header("location: index.php");
+        header("location: inicio_artista.php");
         
     }
 }
