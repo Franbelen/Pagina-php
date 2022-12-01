@@ -19,8 +19,7 @@ if(isset($_POST['user_name']))
     $pswd = $_POST['password'];
 
 	$query = "SELECT * 
-	FROM usuarios;
-    
+	FROM usuarios
     WHERE nombre LIKE $name and password $pswd;";
 
 	$result = $db -> prepare($query);
@@ -55,12 +54,12 @@ if(isset($_POST['user_name']))
         }   
         
     }
-    else
-    {
-        echo "Error en datos";
-        #header("location: index.php");
+    // else
+    // {
+    //     echo "/nError en datos";
+    //     #header("location: index.php");
         
-    }
+    // }
 }
 
 if(!isset($_POST['user_name']))
