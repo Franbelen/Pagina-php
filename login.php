@@ -10,7 +10,6 @@
 <?php
 if(isset($_POST['user_name']))
 {
-
     #Llama a conexión, crea el objeto PDO y obtiene la variable $db
 
     require("config/conexion.php");
@@ -20,7 +19,7 @@ if(isset($_POST['user_name']))
 
 	$query = "SELECT * 
 	FROM usuarios
-    WHERE nombre = $name and password = $pswd;";
+    WHERE nombre = strval($name) and password = strval($pswd);";
 	$result = $db -> prepare($query);
 	$result -> execute();
 	$usi = $result -> fetchAll();
@@ -31,7 +30,6 @@ if(isset($_POST['user_name']))
 
 
     #cantidad de tuplas que cumplen las condiciones
-    #revisar 
     $filas = count($usi);
 
     echo $filas;
