@@ -15,14 +15,14 @@ if(isset($_POST['user_name']))
     require("config/conexion.php");
 
 	$name = $_POST['user_name'];
-    $pswd = strval($_POST['password']);
-    
+    $pswd = $_POST['password'];
+
 
 	$query = "SELECT * 
 	FROM usuarios
     WHERE nombre = $name and password = $pswd;";
 
-    echo $name, $pswd, gettype($name),gettype($pswd);
+    echo $name, $pswd, gettype($name), gettype($pswd);
 
 	$result = $db -> prepare($query);
 	$result -> execute();
@@ -54,12 +54,12 @@ if(isset($_POST['user_name']))
         }   
         
     }
-    // else
-    // {
-    //     echo "/nError en datos";
-    //     #header("location: index.php");
+    else
+    {
+        echo "/nError en datos";
+        #header("location: index.php");
         
-    // }
+    }
 }
 
 if(!isset($_POST['user_name']))
