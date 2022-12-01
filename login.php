@@ -47,12 +47,14 @@ if(isset($_POST['user_name']))
         echo "bienvenido";
         echo $name;
         header("location: inicio_artista.php");
+        exit();
         }
         else 
         {# entrada productora
         echo "bienvenido productora";
         echo $name;
         header("location: inicio_productora.php");
+        exit();
         }   
         
     }

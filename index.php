@@ -7,10 +7,11 @@
 <div id='stars'></div>
 <div id='stars2'></div>
 <div id='stars3'></div>
-<div id='title'>
-  
+<div id='title'></div>
+
   <h1 align="center">DCC Eventos</h1>
-  <div id='title2'><p style="text-align:center;">Aquí podrás encontrar información sobre artistas, productoras, tours y eventos.</p>
+  <div id='title2'>
+  <p style="text-align:center;">Aquí podrás encontrar información sobre artistas, productoras, tours y eventos.</p>
   </div>
   <br>
   <br>
@@ -37,9 +38,10 @@
   <button type="submit" name="login">Login</button>
 </form>
 
-<?php ?>
+
 </div>
 
+<div>
 <h3 align= "center" >Importar datos</h3>
 <form align= "center" action="users/importar_a_usuarios.php" method="post">
     <input type="submit" value="Importar">
