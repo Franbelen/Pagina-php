@@ -1,3 +1,5 @@
+<?php session_start() ?>
+
 <?php include('templates/header.html');   ?>
 <style>
   <?php include "./styles/style.css" ?>
@@ -11,25 +13,19 @@ if(isset($_POST['user_name']))
 
     #Llama a conexión, crea el objeto PDO y obtiene la variable $db
 
-
-
     require("config/conexion.php");
-
-
 
 	$name = $_POST['user_name'];
     $pswd = $_POST['password'];
 
 	$query = "SELECT * 
-	FROM usuarios;";
-	
+	FROM usuarios;
     
-    #WHERE nombre ilike '$name' and password ilike '$pswd' 
+    WHERE nombre LIKE '$name' and password $pswd ";
 
 	$result = $db -> prepare($query);
 	$result -> execute();
 	$usi = $result -> fetchAll();
-
 
     foreach ($usi as $u) {
         echo "<tr> <td>$u[0]</td> <td>$u[1]</td>  <td>$u[2]</td> <td>$u[3]</td></tr><br>";
@@ -44,7 +40,7 @@ if(isset($_POST['user_name']))
 
     if ($filas > 0)
     {
-        session_start();
+        
         #atributos de la sesion
         $_SESSION['name'] = $_POST['user_name'];
         $_SESSION['tipe'] = $usi[0][2];
