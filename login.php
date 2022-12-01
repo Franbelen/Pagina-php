@@ -19,11 +19,11 @@ if(isset($_POST['user_name']))
 	#$result = $db -> prepare($query);
 	#$result -> execute();
 	#$usuarios = $result -> fetchAll();
-    $consulta = pg_query($db, $query)
+    $usuarios = pg_query($db, $query);
 
     
 
-    echo $usuarios;
+    #echo $usuarios;
 
 
     #cantidad de tuplas que cumplen las condiciones
