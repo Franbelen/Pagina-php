@@ -24,8 +24,8 @@ if(isset($_POST['user_name']))
 
     #cantidad de tuplas que cumplen las condiciones
     #revisar 
-    $filas = pg_affected_rows($usuarios);
-
+    $filas = pg_num_rows($usuarios);
+    echo $filas;
     if ($filas == 1)
     {
         session_start();
