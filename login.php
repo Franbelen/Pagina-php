@@ -11,17 +11,17 @@ if(isset($_POST['user_name']))
 
 
 	$name = $_POST['user_name'];
-    $password = $_POST['password'];
+    $pswd = $_POST['password'];
 
 	$query = "SELECT * 
 	FROM usuarios
-	WHERE nombre  ilike $name and password = $password;";
+	WHERE nombre ilike '$name' and password ilike '$pswd' ;";
 
 	$result = $db -> prepare($query);
 	$result -> execute();
 	$usi = $result -> fetchAll();
 
-    echo $usi;
+    #echo $usi;
 
 
     #cantidad de tuplas que cumplen las condiciones
