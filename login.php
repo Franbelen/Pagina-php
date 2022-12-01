@@ -3,6 +3,9 @@ if(isset($_POST['user_name']))
 {
 
     #Llama a conexión, crea el objeto PDO y obtiene la variable $db
+
+
+    #ari
     require("config/conexion.php");
 
 	$name = $_POST['user_name'];
