@@ -8,7 +8,6 @@ if(isset($_POST['user_name']))
 
     require("config/conexion.php");
 
-    session_start();
 
 	$name = $_POST['user_name'];
     $password = $_POST['password'];
@@ -17,9 +16,12 @@ if(isset($_POST['user_name']))
 	FROM usuarios
 	WHERE nombre = $name and password = $password;";
 
-	$result = $db -> prepare($query);
-	$result -> execute();
-	$usuarios = $result -> fetchAll();
+	#$result = $db -> prepare($query);
+	#$result -> execute();
+	#$usuarios = $result -> fetchAll();
+    $consulta = pg_query($db, $query)
+
+    
 
     echo $usuarios;
 
