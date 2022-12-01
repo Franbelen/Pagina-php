@@ -30,7 +30,7 @@ if(isset($_POST['user_name']))
 	$result -> execute();
 	$usi = $result -> fetchAll();
 
-    
+
     foreach ($usi as $u) {
         echo "<tr> <td>$u[0]</td> <td>$u[1]</td>  </tr>";
     }
@@ -38,7 +38,7 @@ if(isset($_POST['user_name']))
 
     #cantidad de tuplas que cumplen las condiciones
     #revisar 
-    $filas = pg_num_rows($usi);
+    $filas = count($usi);
 
     if ($filas > 0)
     {
