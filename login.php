@@ -20,7 +20,8 @@ if(isset($_POST['user_name']))
 
 	$query = "SELECT * 
 	FROM usuarios
-    WHERE nombre = $name and password = $pswd;";
+    WHERE nombre = $name 
+    AND password = $pswd;";
 
     echo $name, $pswd, gettype($name), gettype($pswd);
 
