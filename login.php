@@ -5,7 +5,6 @@
   <?php include "./styles/style.css" ?>
 </style>
 
-<body> 
 
 <?php
 if(isset($_POST['user_name']))
@@ -29,7 +28,7 @@ if(isset($_POST['user_name']))
 	$usi = $result -> fetchAll();
 
     foreach ($usi as $u) {
-        echo "<tr> <td>$u[0]</td> <td>$u[1]</td>  <td>$u[2]</td> <td>$u[3]</td></tr><br>";
+        $tipo = $u[2];
     }
 
     #cantidad de tuplas que cumplen las condiciones
@@ -41,7 +40,7 @@ if(isset($_POST['user_name']))
         
         #atributos de la sesion
         $_SESSION['name'] = $_POST['user_name'];
-        $_SESSION['tipe'] = $usi[1][2];
+        $_SESSION['tipe'] = $tipo;
 
         if ($_SESSION['tipe']== "Artista")
         {# entrada artista
@@ -51,6 +50,8 @@ if(isset($_POST['user_name']))
         }
         else 
         {# entrada productora
+        echo "bienvenido productora";
+        echo $name;
         header("location: inicio_productora.php");
         }   
         
@@ -58,7 +59,7 @@ if(isset($_POST['user_name']))
     else
     {
         echo "/nError en datos";
-        #header("location: index.php");
+        header("location: index.php");
         
     }
 }
@@ -69,6 +70,3 @@ if(!isset($_POST['user_name']))
 }
 
 ?>
-
-</body>
-</html>
