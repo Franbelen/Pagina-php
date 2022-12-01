@@ -1,3 +1,10 @@
+<?php include('templates/header.html');   ?>
+<style>
+  <?php include "./styles/style.css" ?>
+</style>
+
+<body> 
+
 <?php
 if(isset($_POST['user_name']))
 {
@@ -58,3 +65,6 @@ if(!isset($_POST['user_name']))
 }
 
 ?>
+
+</body>
+</html>
