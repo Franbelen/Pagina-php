@@ -29,9 +29,9 @@
 
 <body>
   <h1 align="center"> Bienvenido  <?php echo $name ?> </h1>
-  <h3 align="center"> ¿Quieres saber los nombres y telefonos de todos nuestros artistas?</h3>
+  <h3 align="center"> Eventos aprobados</h3>
 
-  <form align="center" action="consultas/consulta_all.php" method="post">
+  <form align="center" action="consultas/consulta_p_eventos.php" method="post">
   <input type="submit" value="Mostrar lista">
   </form>
   <br>
