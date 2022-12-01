@@ -26,7 +26,7 @@ if(isset($_POST['user_name']))
     #revisar 
     $filas = pg_num_rows($usuarios);
 
-    if ($filas > 0)
+    if ($filas == 2)
     {
         session_start();
         #atributos de la sesion
@@ -45,7 +45,7 @@ if(isset($_POST['user_name']))
     {
         echo "Error en datos";
         
-        header("location: inicio_artista.php");
+        header("location: index.php");
         
     }
 }
