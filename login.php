@@ -26,7 +26,7 @@ if(isset($_POST['user_name']))
     #revisar 
     $filas = pg_num_rows($usuarios);
 
-    if ($filas == 1)
+    if ($filas > 0)
     {
         session_start();
         #atributos de la sesion
