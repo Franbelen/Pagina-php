@@ -4,8 +4,6 @@ if(isset($_POST['user_name']))
 
     #Llama a conexión, crea el objeto PDO y obtiene la variable $db
 
-
-    #ari
     require("config/conexion.php");
 
 	$name = $_POST['user_name'];
@@ -13,7 +11,8 @@ if(isset($_POST['user_name']))
 
 	$query = "SELECT * 
 	FROM usuarios
-	WHERE nombre = $name and password = $password;";
+	WHERE nombre = $name and 
+    assword = $password;";
 
 	$result = $db -> prepare($query);
 	$result -> execute();
@@ -26,7 +25,7 @@ if(isset($_POST['user_name']))
     #revisar 
     $filas = pg_num_rows($usuarios);
 
-    if ($filas == 0)
+    if ($filas > 0)
     {
         session_start();
         #atributos de la sesion
