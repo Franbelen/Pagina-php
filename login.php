@@ -21,7 +21,7 @@ if(isset($_POST['user_name']))
 	$query = "SELECT * 
 	FROM usuarios;
     
-    WHERE nombre LIKE $name and password $pswd ";
+    WHERE nombre LIKE $name and password $pswd;";
 
 	$result = $db -> prepare($query);
 	$result -> execute();
@@ -43,20 +43,21 @@ if(isset($_POST['user_name']))
         
         #atributos de la sesion
         $_SESSION['name'] = $_POST['user_name'];
-        $_SESSION['tipe'] = $usi[0][2];
+        $_SESSION['tipe'] = $usi[1][2];
 
-        if ($_SESSION['tipe']== "Artista"){
-        # entrada artista
-        header("location: inicio_artista.php");}
-        else {
-        # entrada productora
-        header("location: inicio_productora.php");}   
+        if ($_SESSION['tipe']== "Artista")
+        {# entrada artista
+        header("location: inicio_artista.php");
+        }
+        else 
+        {# entrada productora
+        header("location: inicio_productora.php");
+        }   
         
     }
     else
     {
         echo "Error en datos";
-        
         #header("location: index.php");
         
     }
@@ -64,8 +65,7 @@ if(isset($_POST['user_name']))
 
 if(!isset($_POST['user_name']))
 {
-        #header("location: index.php");
-        echo "llega al final";
+    header("location: index.php");
 }
 
 ?>
