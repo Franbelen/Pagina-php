@@ -24,9 +24,9 @@ if(isset($_POST['user_name']))
 
     #cantidad de tuplas que cumplen las condiciones
     #revisar 
-    $filas = pg_num_rows($usuarios);
+    $filas = pg_affected_rows($usuarios);
 
-    if ($filas == 3)
+    if ($filas == 1)
     {
         session_start();
         #atributos de la sesion
@@ -54,5 +54,7 @@ if(!isset($_POST['user_name']))
 {
         header("location: index.php");
 }
+
+
 
 ?>
