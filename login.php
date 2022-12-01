@@ -32,7 +32,7 @@ if(isset($_POST['user_name']))
 
 
     foreach ($usi as $u) {
-        echo "<tr> <td>$u[0]</td> <td>$u[1]</td>  <td>$u[2]</td></tr>";
+        echo "<tr> <td>$u[0]</td> <td>$u[1]</td>  <td>$u[2]</td> <td>$u[3]</td></tr><br>";
     }
 
 
