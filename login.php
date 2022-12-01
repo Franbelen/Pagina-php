@@ -21,14 +21,16 @@ if(isset($_POST['user_name']))
     $pswd = $_POST['password'];
 
 	$query = "SELECT * 
-	FROM usuarios
-	WHERE nombre ilike '$name' and password ilike '$pswd' ;";
+	FROM usuarios;";
+	
+    
+    #WHERE nombre ilike '$name' and password ilike '$pswd' 
 
 	$result = $db -> prepare($query);
 	$result -> execute();
 	$usi = $result -> fetchAll();
 
-    #echo $usi;
+    echo $usi;
 
 
     #cantidad de tuplas que cumplen las condiciones
@@ -54,14 +56,15 @@ if(isset($_POST['user_name']))
     {
         echo "Error en datos";
         
-        header("location: index.php");
+        #header("location: index.php");
         
     }
 }
 
 if(!isset($_POST['user_name']))
 {
-        header("location: index.php");
+        #header("location: index.php");
+        echo "llega al final";
 }
 
 ?>
