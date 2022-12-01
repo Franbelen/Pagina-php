@@ -20,8 +20,7 @@ if(isset($_POST['user_name']))
 
 	$query = "SELECT * 
 	FROM usuarios
-    WHERE nombre LIKE $name and password $pswd;";
-
+    WHERE nombre = $name and password = $pswd;";
 	$result = $db -> prepare($query);
 	$result -> execute();
 	$usi = $result -> fetchAll();
