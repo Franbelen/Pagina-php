@@ -15,13 +15,14 @@ if(isset($_POST['user_name']))
     require("config/conexion.php");
 
 	$name = $_POST['user_name'];
-    $pswd = $_POST['password'];
+    $pswd = strval($_POST['password']);
+    
 
 	$query = "SELECT * 
 	FROM usuarios
     WHERE nombre = $name and password = $pswd;";
 
-    echo $name, $pswd, gettype($name),gettype($pswd) /n;
+    echo $name, $pswd, gettype($name),gettype($pswd);
 
 	$result = $db -> prepare($query);
 	$result -> execute();
