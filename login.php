@@ -4,15 +4,18 @@ if(isset($_POST['user_name']))
 
     #Llama a conexión, crea el objeto PDO y obtiene la variable $db
 
+
+
     require("config/conexion.php");
+
+    session_start();
 
 	$name = $_POST['user_name'];
     $password = $_POST['password'];
 
 	$query = "SELECT * 
 	FROM usuarios
-	WHERE nombre = $name and 
-    assword = $password;";
+	WHERE nombre = $name and password = $password;";
 
 	$result = $db -> prepare($query);
 	$result -> execute();
@@ -53,7 +56,5 @@ if(!isset($_POST['user_name']))
 {
         header("location: index.php");
 }
-
-
 
 ?>
