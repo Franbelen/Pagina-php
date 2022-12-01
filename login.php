@@ -40,6 +40,8 @@ if(isset($_POST['user_name']))
     #revisar 
     $filas = count($usi);
 
+    echo $filas;
+
     if ($filas > 0)
     {
         session_start();
