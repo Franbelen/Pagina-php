@@ -15,7 +15,7 @@
   FROM Evento, Productora
   WHERE Productora.nombre ilike '$name' 
   and Evento.aprobado like 'Aprobado'
-  
+  ORDER BY Evento.fecha_inicio
 
   ;";
 

@@ -7,6 +7,8 @@
 <?php
   #hago la consulta aquí mismo para que se muestren los eventos apenas aparezca la página
   require("../config/conexion.php");
+  $fech_desde = $_POST["desde"];
+  $fech_hasta = $_POST["hasta"];
 
   $query = 
   
@@ -15,9 +17,9 @@
   FROM Evento, Productora
   WHERE Productora.nombre ilike '$name' 
   and Evento.aprobado like 'Aprobado'
-  and Evento.fecha_inicio > 
-  
-
+  and Evento.fecha_inicio > $fech_desde
+  and Evento.fecha_fin < $fech_hasta
+  ORDER BY Evento.fecha_inicio
   ;";
 
 	$result = $db -> prepare($query);

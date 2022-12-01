@@ -15,7 +15,7 @@
   <div id='stars3'></div>
   <div id='title'>
 
-  <h1 align="center">DCC eventos: Productoras</h1>
+  <h1 align="center">Formulario</h1>
   <div id='title2'><p style="text-align:center;">Aquí podrás encontrar información.</p>
   </div>
   <br>
@@ -28,10 +28,16 @@
 </head>
 
 <body>
-  <h1 align="center"> Bienvenido  <?php echo $name ?> </h1>
-  <h3 align="center"> Eventos programdaos / en espera / aprobado por artista / rechazados </h3>
+  <h1 align="center"> ¿Quieres generar un nuevo evento?  <?php echo $name ?> </h1>
+  <h3 align="center"> Nombre del nuevo Evento </h3>
 
   <form align="center" action="consultas/consulta_p_eventos.php" method="post">
+  <input type="text" name="nuevo_evento">
+    <br/>
+    <input type="text" name="nuevo_evento">
+    <br/>
+    <input type="text" name="nuevo_evento">
+    <br/>
   <input type="submit" value="Mostrar lista">
   </form>
   <br>
