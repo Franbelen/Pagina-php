@@ -20,10 +20,9 @@ if(isset($_POST['user_name']))
 
 	$query = "SELECT * 
 	FROM usuarios
-    WHERE nombre = $name 
-    AND password = $pswd;";
+    WHERE nombre = '$name'
+    AND password = '$pswd';";
 
-    echo $name, $pswd, gettype($name), gettype($pswd);
 
 	$result = $db -> prepare($query);
 	$result -> execute();
@@ -32,7 +31,6 @@ if(isset($_POST['user_name']))
     foreach ($usi as $u) {
         echo "<tr> <td>$u[0]</td> <td>$u[1]</td>  <td>$u[2]</td> <td>$u[3]</td></tr><br>";
     }
-
 
     #cantidad de tuplas que cumplen las condiciones
     $filas = count($usi);
@@ -47,6 +45,8 @@ if(isset($_POST['user_name']))
 
         if ($_SESSION['tipe']== "Artista")
         {# entrada artista
+        echo "bienvenido";
+        echo $name;
         header("location: inicio_artista.php");
         }
         else 
