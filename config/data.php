@@ -1,5 +1,4 @@
 <?php
-#config/data.php
 $user = 'grupo108';
 $password = 'bbdd.39';
 $databaseName = 'grupo39e3';

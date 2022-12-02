@@ -12,8 +12,6 @@
   #Llama a conexión, crea el objeto PDO y obtiene la variable $db
   require("../config/conexion.php");
 
-	$nombre = $_POST["nombre_artista"];
-
 	$query = "SELECT *
 	FROM usuarios;";
 
@@ -25,10 +23,10 @@
 	<table>
     <tr>
       <th>Nombre</th>
-      <th>Cantidad entradas</th>
+      <th>Tipo</th>
     </tr>
   <?php
-	echo "Artista: $nombre";
+	
 	foreach ($artistas as $artista) {
   		echo "<tr> <td>$artista[1]</td> <td>$artista[2]</td> </tr>";
 	}
