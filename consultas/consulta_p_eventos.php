@@ -9,15 +9,15 @@
   require("../config/conexion.php");
 
   $query = 
-  
-  
-  "SELECT DISTINCT Evento.nombre, Evento.fecha_inicio
-  FROM Evento, Productora
-  WHERE Productora.nombre ilike '$name' 
-  and Evento.aprobado like 'Aprobado'
-  ORDER BY Evento.fecha_inicio
 
+  "SELECT DISTINCT e.nombre, e.fecha_inicio
+  FROM Evento as e, Presentacion as p
+  WHERE LOWER(e.nombre_productora) LIKE LOWER (' %$nombre productora%')
+  ORDER BY p.fecha_inicio 
   ;";
+  
+  
+
 
 	$result = $db -> prepare($query);
 	$result -> execute();
