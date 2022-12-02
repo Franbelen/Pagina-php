@@ -1,7 +1,5 @@
-<?php include('templates/header.html');   ?>
-<style>
-<?php include "./styles/style.css" ?>
-</style>
+<?php include('./templates/header.html');   ?>
+
 
 <head>
 
@@ -22,5 +20,25 @@
   <br>
 </head>
 
+<h3 align="center">Ver usuarios de la pagina</h3>
+
+  <form align="center" action="ver_usuarios.php" method="POST">
+  <button type="submit" name="Buscar"></button>
+
+</form>
+
+<h3 align="center">Importar nuevos artistas y ptoductoras</h3>
+
+  <form align="center" action="importar.php" method="POST">
+  <button type="submit" name="Importar"></button>
+
+</form>
+
+<h3 align="center"> Eliminar usuarios</h3>
+
+    <form align="center" action="eliminar.php" method="POST">
+  <button type="submit" name="Eliminar"></button>
+  
+</form>
 
 </html>
