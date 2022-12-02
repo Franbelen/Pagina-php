@@ -23,7 +23,7 @@
 <h3 align="center">Ver usuarios de la pagina</h3>
 
   <form align="center" action="ver_usuarios.php" method="POST">
-  <button type="submit" name="Buscar"></button>
+  <button type="submit" name="Buscaruwu">Buscar</button>
 
 </form>
 
@@ -37,7 +37,7 @@
 <h3 align="center"> Eliminar usuarios</h3>
 
     <form align="center" action="eliminar.php" method="POST">
-  <button type="submit" name="Eliminar"></button>
+  <button type="submit" >Eliminar</button>
   
 </form>
 

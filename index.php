@@ -7,7 +7,7 @@
 <div id='stars'></div>
 <div id='stars2'></div>
 <div id='stars3'></div>
-<div id='title'></div>
+<div id='title'>
 
   <h1 align="center">DCC Eventos</h1>
   <div id='title2'>
@@ -35,7 +35,7 @@
   <br/><br/>
   <input type="text" name='password'>
   <br/><br/>
-  <button type="submit" name="login">Login</button>
+  <button type="submit">Login</button>
 </form>
 
 
