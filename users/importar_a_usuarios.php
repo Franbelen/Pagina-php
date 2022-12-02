@@ -1,4 +1,3 @@
-<?php include('..templates/header.html')?>
 <?php include('../templates/header.html')?>
 
 <head>
@@ -11,6 +10,7 @@
   <h1 align="center">Importar datos</h1>
   <div id='title2'><p style="text-align:center;">Aquí podrás importar los datos de ambas bases para agregarlos a usuarios.</p>
   </div>
+</head>  
   <br>
   <br>
   <br>
@@ -18,8 +18,8 @@
   <br>
   <br>
   <br>
-</head>
 
+<body>
 <h3 align="center">Ver usuarios de la pagina</h3>
 
   <form action="usuarios_pagina.php" method="POST">
@@ -40,5 +40,6 @@
   <button align="center" type="submit">Eliminar</button>
   
 </form>
+</body>
 
 </html>
