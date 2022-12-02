@@ -8,7 +8,7 @@
   <div id='title'>
 
   <h1 align="center">Importar datos</h1>
-  <div id='title2'><p style="text-align:center;">Aquí podrás importar los datos de ambas bases para agregarlos a usuarios.</p>
+  <div id='title2'><p style="text-align:center;">Aquí podrás modificar y ver usuarios.</p>
   </div>
 </head>  
   <br>
