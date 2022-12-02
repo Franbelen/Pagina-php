@@ -5,10 +5,10 @@
   <div id='stars2'></div>
   <div id='stars3'></div>
   <div id='title'>
-
+</body>
 <?php
   #Llama a conexión, crea el objeto PDO y obtiene la variable $db
-  include("config/conexion.php");
+  include("../config/conexion.php");
 
 	$query = "SELECT *
 	FROM usuarios;";
@@ -17,7 +17,6 @@
 	$result -> execute();
 	$artistas = $result -> fetchAll();
   ?>
-
 	<table>
     <tr>
       <th>Nombre</th>
