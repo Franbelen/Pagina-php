@@ -18,15 +18,19 @@
   <br>
   <br>
   <br>
+  <br>
+  <br>
+  <br>
 
 <body>
+<div>
 <h3 align="center">Ver usuarios de la pagina</h3>
 
   <form action="usuarios_pagina.php" method="POST">
   <button align="center" type="submit">Buscar</button>
 
 </form>
-
+</div>
 <h3 align="center">Importar nuevos artistas y productoras</h3>
 
   <form action="importar.php" method="POST">
