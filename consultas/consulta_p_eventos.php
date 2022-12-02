@@ -16,8 +16,8 @@
   ORDER BY p.fecha_inicio 
   ;";
   
+  echo $query;
   
-
 
 	$result = $db -> prepare($query);
 	$result -> execute();
