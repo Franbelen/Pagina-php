@@ -1,8 +1,8 @@
-<?php include('../templates/header.html');   ?>
 <?php
   session_start();
   $name = $_SESSION['name'];
 ?>
+<?php include('../templates/header.html');   ?>
 <body>
 <?php
   #hago la consulta aquí mismo para que se muestren los eventos apenas aparezca la página
