@@ -6,7 +6,7 @@
 <body>
 <?php
   #hago la consulta aquí mismo para que se muestren los eventos apenas aparezca la página
-  #require("../config/conexion.php");
+  require("../config/conexion.php");
 
   $query = 
 
@@ -15,10 +15,10 @@
   ;";
   #WHERE LOWER(e.nombre_productora) LIKE LOWER (' %$nombre productora%')
   #ORDER BY p.fecha_inicio 
-  echo $db;
+
   
 
-	$result = $db -> prepare($query);
+	$result = $db2 -> prepare($query);
 	$result -> execute();
 	$eventos = $result -> fetchAll();
   ?>
