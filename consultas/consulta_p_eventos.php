@@ -6,7 +6,7 @@
 <body>
 <?php
   #hago la consulta aquí mismo para que se muestren los eventos apenas aparezca la página
-  require("../config/conexion.php");
+  #require("../config/conexion.php");
 
   $query = 
 
