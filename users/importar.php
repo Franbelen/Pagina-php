@@ -1,7 +1,5 @@
-<?php include('../templates/header.html');   ?>
-<style>
-  <?php include ".././styles/style.css" ?>
-</style>
+<?php include('../templates/header.html');?>
+
 <body>
   <div id='stars'></div>
   <div id='stars2'></div>
@@ -10,7 +8,7 @@
 
 <?php
   #Llama a conexión, crea el objeto PDO y obtiene la variable $db
-  require("../config/conexion.php");
+  require("..config/conexion.php");
 
 	$query = "SELECT *
 	FROM usuarios;";
