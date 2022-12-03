@@ -8,16 +8,17 @@
 <?php
   #hago la consulta aquí mismo para que se muestren los eventos apenas aparezca la página
   require("../config/conexion.php");
-
+  $name = str_replace("_"," ", $name);
   $query = 
 
   "SELECT e.nombre, e.Productora
   FROM Evento as e, Presentacion as p
+  WHERE e.Productora ILIKE  '$name'
+  
  
   ;";
 
-  #WHERE LOWER(e.Productora) LIKE LOWER(' %$name')
-  
+
 
 
 
@@ -31,7 +32,7 @@
   <table>
     <tr>
       <th>Nombre_evento</th>
-      <th>fecha_inicio</th>
+      <th>productora</th>
     </tr>
   
       <?php
