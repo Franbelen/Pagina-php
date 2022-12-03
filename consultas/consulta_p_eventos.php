@@ -16,7 +16,7 @@
  
   ;";
 
-  WHERE LOWER(e.Productora) LIKE LOWER(' %$name')
+  #WHERE LOWER(e.Productora) LIKE LOWER(' %$name')
   
 
 
