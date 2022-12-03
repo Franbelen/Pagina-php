@@ -15,7 +15,7 @@
   FROM Evento as e, Presentacion as p
   WHERE e.Productora ILIKE  '$name'
   ORDER BY p.fecha_inicio 
-  AND p.evento = e.nombre
+  AND p.Evento = e.nombre
   
  
   ;";
