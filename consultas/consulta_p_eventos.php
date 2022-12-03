@@ -13,9 +13,11 @@
 
   "SELECT e.nombre, e.Productora
   FROM Evento as e, Presentacion as p
+ 
+  ;";
+
   WHERE LOWER(e.Productora) LIKE LOWER(' %$name')
   
-  ;";
 
 
 
