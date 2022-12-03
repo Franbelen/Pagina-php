@@ -36,7 +36,7 @@ if(isset($_POST['user_name']))
         $_SESSION['name'] = $_POST['user_name'];
         $_SESSION['tipe'] = $tipo;
 
-        if ($_SESSION['tipe']== "Artista")
+        if ($_SESSION['tipe']== "artista")
         {# entrada artista
     
         header("location: inicio_artista.php");
