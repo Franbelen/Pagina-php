@@ -11,7 +11,7 @@
   $name = str_replace("_"," ", $name);
   $query = 
 
-  "SELECT e.nombre, e.Productora
+  "SELECT DISTINCT e.nombre, e.Productora
   FROM Evento as e, Presentacion as p
   WHERE e.Productora ILIKE  '$name'
   
