@@ -61,7 +61,7 @@
 
 <h3 align="center">Ver usuarios de la pagina (con contraseña actual)</h3>
 
-  <form action="usuarios_pagina_con.php" method="POST">
+  <form action="users/usuarios_pagina_con.php" method="POST">
   <button align="center" type="submit">Buscar</button>
 
 </form>
