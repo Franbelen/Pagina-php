@@ -38,12 +38,13 @@
 
 </form>
 
-<h3 align="center"> Eliminar usuarios</h3>
+<h3 align="center">Ver usuarios de la pagina (con contraseña actual)</h3>
 
-  <form action="eliminar.php" method="POST">
-  <button align="center" type="submit">Eliminar</button>
-  
+  <form action="usuarios_pagina.php" method="POST">
+  <button align="center" type="submit">Buscar</button>
+
 </form>
+
 </body>
 
 </html>
