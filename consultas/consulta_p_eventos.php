@@ -19,10 +19,6 @@
  
   ;";
 
-
-
-
-
 	$result = $db2 -> prepare($query);
 	$result -> execute();
 	$eventos = $result -> fetchAll();
