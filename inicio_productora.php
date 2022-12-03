@@ -38,7 +38,7 @@
   <br>
 
   <h3 align="center"> Filtrar por fechas</h3>
-  <form align="center" action="consultas/consulta_fecha_p_eventos.php" method="post">
+  <form align="center" action="consultas/consulta_p_fecha_eventos.php" method="post">
     Desde
     <input type="text" name="desde">
     <br/>
@@ -56,7 +56,7 @@
 
   <h3 align="center"> ¿Crear Evento?</h3>
 
-  <form align="center" action="consultas/formulario.php" method="post">
+  <form align="center" action="consultas/p_formulario.php" method="post">
 
     Llena este formulario para proponer un evento
     <input type="submit" value="Formulario">

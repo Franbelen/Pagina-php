@@ -11,14 +11,13 @@
   $fech_hasta = $_POST["hasta"];
 
   $query = 
-  "SELECT DISTINCT e.nombre, e.fecha_inicio
+  "SELECT e.nombre
   FROM Evento as e, Presentacion as p
-  WHERE LOWER(e.nombre_productora) LIKE LOWER (' %$nombre productora%')
+  WHERE LOWER(e.nombre_productora) LIKE LOWER (' %$name')
   AND p.fecha_inicio > (' %$fech_desde%')
   AND p.fecha_termino < (' %$fech_hasta%')
   ORDER BY p.fecha_inicio 
   ;";
-  
 
 
 	$result = $db -> prepare($query);
