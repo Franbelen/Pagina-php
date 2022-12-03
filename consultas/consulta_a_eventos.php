@@ -12,8 +12,8 @@
 
   $query = 
   "SELECT DISTINCT e.nombre, e.fecha_inicio
-  FROM Evento as e, Presentacion as p
-  WHERE LOWER(e.nombre_productora) LIKE LOWER (' %$nombre productora%')
+  FROM Evento as e
+  WHERE LOWER(e.nombre) LIKE LOWER (' %$nombre')
   AND p.fecha_inicio > (' %$fech_desde%')
   AND p.fecha_termino < (' %$fech_hasta%')
   ORDER BY p.fecha_inicio 
