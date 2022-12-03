@@ -11,9 +11,9 @@
 
   $query = 
 
-  "SELECT e.nombre, e.productora
+  "SELECT e.nombre, e.Productora
   FROM Evento as e, Presentacion as p
-  WHERE LOWER(e.productora) LIKE LOWER(' %$name')
+  WHERE LOWER(e.Productora) LIKE LOWER(' %$name')
   
   ;";
 
