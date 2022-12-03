@@ -11,8 +11,8 @@
 
   $query = 
 
-  "SELECT  e.nombre, e.fecha_inicio
-  FROM Evento as e
+  "SELECT  *
+  FROM Productora
   ;";
   #WHERE LOWER(e.nombre_productora) LIKE LOWER (' %$nombre productora%')
   #ORDER BY p.fecha_inicio 
