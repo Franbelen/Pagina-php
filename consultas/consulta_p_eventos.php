@@ -13,11 +13,12 @@
 
   "SELECT e.nombre, e.productora
   FROM Evento as e, Presentacion as p
+  WHERE LOWER(e.Productora) LIKE LOWER(' %$name')
   
   ;";
 
 
-#WHERE LOWER(e.Productora) LIKE LOWER(' %$name')
+
  # ORDER BY p.fecha_inicio 
 
 	$result = $db2 -> prepare($query);
