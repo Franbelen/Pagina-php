@@ -13,7 +13,7 @@
 
   "SELECT e.nombre, e.productora
   FROM Evento as e, Presentacion as p
-  WHERE LOWER(e.Productora) LIKE LOWER(' %$name')
+  WHERE LOWER(e.productora) LIKE LOWER(' %$name')
   
   ;";
 
