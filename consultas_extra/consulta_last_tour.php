@@ -21,7 +21,7 @@
 	WHERE t.nombre = e.nombre
 	AND LOWER(e.nombre_artista) LIKE LOWER('%$nombre%')
 	ORDER BY e.fecha_inicio DESC
-	LIMIT 1;";
+	;";
 
 	$result = $db -> prepare($query);
 	$result -> execute();
@@ -31,13 +31,13 @@
 
 	<table>
     <tr>
-	  <th>    Nombre    </th>
-	  <th>    Recinto    </th>
-	  <th>    Artista    </th>
-      <th>    Pais    </th>
-	  <th>    Ciudad    </th>
-	  <th>    Fecha    </th>
-	  <th>    Productora    </th>
+	  <th>     Nombre    </th>
+	  <th>   - Recinto    </th>
+	  <th>   - Artista   </th>
+      <th>   - Pais    </th>
+	  <th>   - Ciudad    </th>
+	  <th>   - Fecha    </th>
+	  <th>   - Productora    </th>
     </tr>
   <?php
 	echo "Nombre artista ingresado: $nombre \n";
