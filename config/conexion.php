@@ -1,5 +1,5 @@
 
-?><?php
+<?php
 try {
   $user = 'grupo39';
   $password = 'bbdd.39';
