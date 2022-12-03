@@ -7,16 +7,16 @@
 <?php
   #hago la consulta aquí mismo para que se muestren los eventos apenas aparezca la página
   require("../config/conexion.php");
-  $fech_desde = strtotime($_POST["desde"]);
-  $fech_hasta = strtotime($_POST["hasta"]);
+  $fech_desde = $_POST["desde"];
+  $fech_hasta = $_POST["hasta"];
 
   $query = 
   "SELECT DISTINCT e.nombre, p.fecha_inicio 
   FROM Evento as e, Presentacion as p
   WHERE e.Productora ILIKE  '$name'
   AND p.Evento = e.nombre
-  AND p.fecha_inicio > $fech_desde
-  AND p.fecha_termino < $fech_hasta
+  AND p.fecha_inicio > cast($fech_desde as date)
+  AND p.fecha_termino < cast($fech_hasta as date)
   ;";
 
 
