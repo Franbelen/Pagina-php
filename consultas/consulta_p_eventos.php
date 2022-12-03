@@ -11,9 +11,10 @@
   $name = str_replace("_"," ", $name);
   $query = 
 
-  "SELECT DISTINCT e.nombre, e.Productora
+  "SELECT DISTINCT e.nombre, p.fecha_inicio 
   FROM Evento as e, Presentacion as p
   WHERE e.Productora ILIKE  '$name'
+  ORDER BY p.fecha_inicio 
   
  
   ;";
@@ -22,7 +23,7 @@
 
 
 
- # ORDER BY p.fecha_inicio 
+ # 
 
 	$result = $db2 -> prepare($query);
 	$result -> execute();
@@ -32,7 +33,7 @@
   <table>
     <tr>
       <th>Nombre_evento</th>
-      <th>productora</th>
+      <th>fecha_inicio</th>
     </tr>
   
       <?php
