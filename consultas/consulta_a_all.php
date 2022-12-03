@@ -10,22 +10,22 @@
   
   $query = 
   "SELECT e.nombre, e.fecha_inicio, e.nombre_recinto, t.nombre, es.nombre, es.lugar, v.tipo_traslado, ec.asiento, (SELECT STRING_AGG(e.nombre_artista, ',') AS result
-  FROM eventos as e, {
-    SELECT eventos
-    FROM artistas, eventos
-    WHERE eventos.nombre_artista = $nombre 
-    } as eventos_artista
-  WHERE e.nombre = eventos_artistas.nombre
-  ) as Artistas_relacionados
+    FROM eventos as e, {
+      SELECT eventos
+      FROM artistas, eventos
+      WHERE eventos.nombre_artista = $nombre
+      } as eventos_artista
+    WHERE e.nombre = eventos_artistas.nombre
+    ) as Artistas_relacionados
   FROM eventos a s e, artistas as a, tour as t, estadía as es, viaje as v, entradascortesia as ec 
-  WHERE a.nombre = '$nombre'
-  AND e.nombre_artista = $nombre
-  AND e.nombre = t.nombre
-  AND es.codigo = v.codigo
-  AND v.nombre_artista = $nombre
-  AND ec.nombre_artista = $nombre
-  AND ec.nombre_evento = e.nombre 
-  ;";
+    WHERE a.nombre = $nombre
+      AND e.nombre_artista = $nombre
+      AND e.nombre = t.nombre
+      AND es.codigo = v.codigo
+      AND v.nombre_artista = $nombre
+      AND ec.nombre_artista = $nombre
+      AND ec.nombre_evento = e.nombre
+    ;";
   
 
 

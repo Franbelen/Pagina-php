@@ -36,6 +36,57 @@
     
     <input type="submit" value="Buscar">
   </form>
+  <h3 align="center"> ¿Quieres saber los nombres y telefonos de todos nuestros artistas?</h3>
+
+<form align="center" action="consultas_extra/consulta_all.php" method="post">
+<input type="submit" value="Mostrar lista">
+</form>
+<br>
+<br>
+
+<h3 align="center"> Entradas cortesia entregadas</h3>
+<form align="center" action="consultas_extra/consulta_entradas_cortesia.php" method="post">
+  
+  <input type="submit" value="Buscar">
+</form>
+
+<br>
+<br>
+<br>
+
+
+<h3 align="center"> Tours realizados </h3>
+
+<form align="center" action="consultas_extra/consulta_last_tour.php" method="post">
+  <input type="submit" value="Buscar">
+</form>
+
+<br>
+<br>
+<br>
+
+
+<h3 align="center"> Productoras con las que has trabajado </h3>
+<form align="center" action="consultas_extra/consulta_productoras.php" method="post">
+  <input type="submit" value="Buscar">
+</form>
+<br>
+<br>
+<br>
+
+
+<h3 align="center"> Hospedajes </h3>
+<form align="center" action="consultas_extra/consulta_hospedajes.php" method="post">
+  Nombre artista:
+  <input type="text" name="nombre">
+  <br/><br/>
+  <input type="submit" value="Buscar">
+</form>
+<br>
+<br>
+<br>
+
 
 </body>
 </html>
+
