@@ -19,7 +19,7 @@
 
   
 
-	$result = $db -> prepare($query);
+	$result = $db2 -> prepare($query);
 	$result -> execute();
 	$eventos = $result -> fetchAll();
   ?>
