@@ -7,8 +7,8 @@
 <?php
   #hago la consulta aquí mismo para que se muestren los eventos apenas aparezca la página
   require("../config/conexion.php");
-  $fech_desde = $_POST["desde"];
-  $fech_hasta = $_POST["hasta"];
+  $fech_desde = strtotime($_POST["desde"]);
+  $fech_hasta = strtotime($_POST["hasta"]);
 
   $query = 
   "SELECT DISTINCT e.nombre, p.fecha_inicio 
