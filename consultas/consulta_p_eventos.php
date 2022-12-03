@@ -14,7 +14,6 @@
   "SELECT DISTINCT e.nombre, p.fecha_inicio 
   FROM Evento as e, Presentacion as p
   WHERE e.Productora ILIKE  '$name'
-  ORDER BY p.fecha_inicio 
   AND p.Evento = e.nombre
   
  
@@ -22,14 +21,7 @@
 
 
 
-SELECT DISTINCT e.nombre, p.fecha_inicio 
-  FROM Evento as e, Presentacion as p
-  WHERE e.Productora ILIKE  '$name'
-  ORDER BY p.fecha_inicio 
-  AND p.Evento = e.nombre
-  
 
- # 
 
 	$result = $db2 -> prepare($query);
 	$result -> execute();
