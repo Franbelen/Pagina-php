@@ -11,7 +11,7 @@
 
   $query = 
 
-  "SELECT e.nombre
+  "SELECT e.nombree, e.productora
   FROM Evento as e, Presentacion as p
   
   ;";
