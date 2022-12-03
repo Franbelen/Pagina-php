@@ -1,3 +1,7 @@
+<?php
+  session_start();
+  $nombre = $_SESSION['name'];
+?>
 <?php include('../templates/header.html');   ?>
 <style>
   <?php include ".././styles/style.css" ?>
@@ -11,8 +15,6 @@
 <?php
   #Llama a conexión, crea el objeto PDO y obtiene la variable $db
   require("../config/conexion.php");
-
-	$nombre = $_POST["nombre_artista"];
 
 	$query = "SELECT ec.nombre_artista as artista, COUNT(ec.asiento) as cantidad_entradas_cortesia
 	FROM entradascortesia as ec

@@ -1,3 +1,7 @@
+<?php
+  session_start();
+  $nombre = $_SESSION['name'];
+?>
 <?php include('../templates/header.html');   ?>
 <style>
   <?php include ".././styles/style.css" ?>
@@ -10,8 +14,6 @@
 <?php
   #Llama a conexión, crea el objeto PDO y obtiene la variable $db
   require("../config/conexion.php");
-
-	$nombre = $_POST["nombre"];
 
 	$query = "SELECT e.nombre_artista, p.* 
 	FROM eventos as e, productoras as p
@@ -26,7 +28,6 @@
 <h2> Productoras que han trabajado con un artista </h2>
 	<table>
     <tr>
-	  <th>  Artista  </th>
       <th>  Productora  </th>
 	  <th>  País  </th>
 	  <th>  Número  </th>
@@ -35,7 +36,7 @@
 	echo "Nombre artista ingresado: $nombre \n";
 
 	foreach ($artistas as $artista) {
-  		echo "<tr> <td>$artista[0]</td> <td>$artista[1]</td> <td>$artista[2]</td> <td>$artista[3]</td> </tr>";
+  		echo "<tr> <td>$artista[1]</td> <td>$artista[2]</td> <td>$artista[3]</td> </tr>";
 	}
   ?>
 	</table>

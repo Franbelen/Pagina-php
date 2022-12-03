@@ -1,3 +1,8 @@
+<?php
+  session_start();
+  $nombre = $_SESSION['name'];
+?>
+
 <?php include('../templates/header.html');   ?>
 <style>
   <?php include ".././styles/style.css" ?>
@@ -10,8 +15,6 @@
 <?php
   #Llama a conexión, crea el objeto PDO y obtiene la variable $db
   require("../config/conexion.php");
-
-	$nombre = $_POST["nombre"];
 
 	$query = "SELECT e.*
 	FROM tour as t, eventos as e
