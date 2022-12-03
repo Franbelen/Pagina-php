@@ -15,8 +15,8 @@
   FROM Evento as e, Presentacion as p
   WHERE e.Productora ILIKE  '$name'
   AND p.Evento = e.nombre
-  AND p.fecha_inicio > cast($fech_desde as date)
-  AND p.fecha_termino < cast($fech_hasta as date)
+  AND p.fecha_inicio > $fech_desde
+  AND p.fecha_termino < $fech_hasta
   ;";
 
 
