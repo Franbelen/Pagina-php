@@ -22,6 +22,7 @@
     <tr>
       <th>Nombre</th>
       <th>Tipo</th>
+      <th>Contraseña</th>
     </tr>
   <?php
 	
