@@ -13,17 +13,17 @@
   FROM eventos as e, {
     SELECT eventos
     FROM artistas, eventos
-    WHERE eventos.nombre_artista = ’$nombre’
+    WHERE eventos.nombre_artista = $nombre 
     } as eventos_artista
   WHERE e.nombre = eventos_artistas.nombre
   ) as Artistas_relacionados
   FROM eventos a s e, artistas as a, tour as t, estadía as es, viaje as v, entradascortesia as ec 
   WHERE a.nombre = '$nombre'
-  AND e.nombre_artista = '$nombre’
+  AND e.nombre_artista = $nombre
   AND e.nombre = t.nombre
   AND es.codigo = v.codigo
-  AND v.nombre_artista = ’$nombre'
-  AND ec.nombre_artista = ’$nombre’
+  AND v.nombre_artista = $nombre
+  AND ec.nombre_artista = $nombre
   AND ec.nombre_evento = e.nombre 
   ;";
   

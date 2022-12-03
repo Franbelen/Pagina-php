@@ -6,6 +6,9 @@
   <div id='stars3'></div>
   <div id='title'>
 </body>
+
+<h3> No implementado importar nuevos, datos manejados con pandas y cargados manualmente a la base </h3>
+
 <?php
   #Llama a conexión, crea el objeto PDO y obtiene la variable $db
   include("../config/conexion.php");
@@ -30,4 +33,5 @@
   ?>
 	</table>
 	</div>
+
 <?php include('../templates/footer.html'); ?>

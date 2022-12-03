@@ -30,23 +30,12 @@
 
 <body>
   <h1 align="center"> Bienvenido  <?php echo $name ?> a la pagina de artistas</h1>
-  <h3 align="center"> Siguientes eventos</h3>
-
-  <form align="center" action="consultas/consulta_a_eventos.php" method="post">
-  <input type="submit" value="Mostrar lista">
-  </form>
-  <br>
-  <br>
 
   <h3 align="center"> Información general</h3>
   <form align="center" action="consultas/consulta_a_all.php" method="post">
     
     <input type="submit" value="Buscar">
   </form>
-  
-  <br>
-  <br>
-  <br>
 
 </body>
 </html>
